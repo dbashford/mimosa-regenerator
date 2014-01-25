@@ -5,6 +5,8 @@ mimosa-regenerator
 
 This module uses [Facebook's regenerator tool](https://github.com/facebook/regenerator) to transpile ES6 generators to valid ES5.
 
+Check out an example app for this module here: https://github.com/dbashford/MimosaRegeneratorExample
+
 For more information regarding Mimosa, see http://mimosa.io
 
 ## Usage
