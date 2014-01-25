@@ -18,9 +18,9 @@ exports.placeholder = function() {
          "                              # transpiling ES6 generators to valid es5 code\n" +
          "    # includeRuntime: false   # includes runtime\n" +
          "    # writeRuntime: true      # whether or not to write the runtime as a separate file\n" +
-         "    # runtimePath: 'wrapGenerator.js'  # valid when writeRuntime is true. The path\n" +
-         "                              # relative to watch.javascriptDir to where you would like\n" +
-         "                              # the runtime library to be written.\n";
+         "    # runtimePath: 'wrapGenerator.js'  # valid when writeRuntime is true. Where you would\n" +
+         "                              # like the runtime to be written. The path is relative to\n" +
+         "                              # watch.javascriptDir.\n";
 };
 
 exports.validate = function(config, validators) {
