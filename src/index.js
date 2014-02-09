@@ -2,10 +2,10 @@ var path = require( 'path' )
   , fs = require( 'fs' )
   , wrench = require ( 'wrench' )
   , regenerator = require( "regenerator" )
-  , logger = require( 'logmimosa')
   , config = require( './config' )
   , hasGenerator = /\bfunction\s*\*/
-  , wroteRuntime = false;
+  , wroteRuntime = false
+  , logger = null;
 
 var _writeRuntime = function ( mimosaConfig ) {
   fs.exists( mimosaConfig.regenerator.fullRuntimePath, function ( exists ) {
@@ -64,6 +64,7 @@ var _regenerate = function ( mimosaConfig, options, next ) {
 };
 
 var registration = function (mimosaConfig, register) {
+  logger = mimosaConfig.log;
   register(
     ['add','update','buildFile'],
     'afterCompile',
