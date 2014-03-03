@@ -1,8 +1,10 @@
-var path = require( 'path' )
-  , fs = require( 'fs' )
-  , wrench = require ( 'wrench' )
+/* eslint strict:0 */
+
+var path = require( "path" )
+  , fs = require( "fs" )
+  , wrench = require( "wrench" )
   , regenerator = require( "regenerator" )
-  , config = require( './config' )
+  , config = require( "./config" )
   , hasGenerator = /\bfunction\s*\*/
   , wroteRuntime = false
   , logger = null;
@@ -13,6 +15,7 @@ var _writeRuntime = function ( mimosaConfig ) {
       var dirname = path.dirname( mimosaConfig.regenerator.fullRuntimePath );
       fs.exists( dirname, function( dirExists ) {
         if ( !dirExists ) {
+          /* eslint no-octal:0 */
           wrench.mkdirSyncRecursive( dirname, 0777 );
         }
         fs.readFile( regenerator.runtime.dev, function( err, text) {
@@ -66,8 +69,8 @@ var _regenerate = function ( mimosaConfig, options, next ) {
 var registration = function (mimosaConfig, register) {
   logger = mimosaConfig.log;
   register(
-    ['add','update','buildFile'],
-    'afterCompile',
+    ["add","update","buildFile"],
+    "afterCompile",
     _regenerate,
     mimosaConfig.extensions.javascript );
 };
