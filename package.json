@@ -1,6 +1,6 @@
 {
   "name": "mimosa-regenerator",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/dbashford/mimosa-regenerator",
   "author": "David Bashford",
   "description": "A Mimosa module for transpiling ES6 generators to valid ES5",
@@ -23,8 +23,8 @@
     "es5"
   ],
   "dependencies": {
-    "wrench": "1.5.6",
-    "regenerator":"0.3.6"
+    "wrench": "1.5.8",
+    "regenerator":"0.4.11"
   },
   "license": "MIT",
   "main": "./src",

@@ -17,7 +17,7 @@ Add `'regenerator'` to your list of modules.  That's all!  Mimosa will install t
 
 During processing of JavaScript files, this module will compile your ES6 generator syntax to valid ES5 before the file is written to the destination directory.
 
-The output ES5 code depends on a `wrapGenerator` function.  You could have that included in each file that gets transpiled.  Or you can choose to have that function written as a separate file. \
+The output ES5 code depends on a `wrapGenerator` function.  You could have that included in each file that gets transpiled.  Or you can choose to have that function written as a separate file.
 
 ## Default Config
 
